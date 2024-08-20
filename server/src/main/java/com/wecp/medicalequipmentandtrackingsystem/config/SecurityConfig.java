@@ -84,12 +84,12 @@ public class SecurityConfig{
                 .antMatchers(HttpMethod.POST, "/api/hospital/order").hasAnyAuthority("HOSPITAL") // Repeat for accounts
                 .antMatchers(HttpMethod.GET, "/api/hospitals").hasAuthority("HOSPITAL")
                 .antMatchers(HttpMethod.GET, "/api/hospital/equipment/{hospitalId}").hasAuthority("HOSPITAL")
-                .antMatchers(HttpMethod.GET, "/api/technician/maintenance").hasAnyAuthority("TECHNICIAN", "HOSPITAL")
-                .antMatchers(HttpMethod.GET, "/api/supplier/orders").hasAnyAuthority("SUPPLIER", "HOSPITAL")
-                .antMatchers(HttpMethod.PUT, "/api/technician/maintenance/update/{maintenanceId}").hasAnyAuthority("TECHNICIAN", "HOSPITAL")
-                .antMatchers(HttpMethod.PUT, "/api/supplier/order/update/{orderId}").hasAnyAuthority("SUPPLIER", "HOSPITAL")
-                .antMatchers(HttpMethod.DELETE, "/api/maintainence/{id}").hasAnyAuthority("TECHNICIAN", "HOSPITAL")
-                .antMatchers(HttpMethod.DELETE, "/api/orders/{id}").hasAnyAuthority("SUPPLIER", "HOSPITAL")
+                .antMatchers(HttpMethod.GET, "/api/technician/maintenance").hasAnyAuthority("TECHNICIAN")
+                .antMatchers(HttpMethod.GET, "/api/supplier/orders").hasAnyAuthority("SUPPLIER")
+                .antMatchers(HttpMethod.PUT, "/api/technician/maintenance/update/{maintenanceId}").hasAnyAuthority("TECHNICIAN")
+                .antMatchers(HttpMethod.PUT, "/api/supplier/order/update/{orderId}").hasAnyAuthority("SUPPLIER")
+                .antMatchers(HttpMethod.DELETE, "/api/maintainence/{id}").hasAnyAuthority("TECHNICIAN")
+                .antMatchers(HttpMethod.DELETE, "/api/orders/{id}").hasAnyAuthority("SUPPLIER")
                 // .antMatchers(HttpMethod.DELETE, "/api/orders/{id}").hasAnyAuthority("HOSPITAL", "HOSPITAL")
 
 
